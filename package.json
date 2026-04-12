@@ -1,0 +1,58 @@
+{
+  "name": "outer-sunset",
+  "version": "0.1.0",
+  "description": "Your engineering board, inside your editor. Real data from Linear and GitHub.",
+  "type": "module",
+  "bin": {
+    "outer-sunset": "dist/server/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:ui": "cross-env INPUT=src/ui/board/index.html vite build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "build": "pnpm run build:ui && pnpm run build:server",
+    "dev:ui": "cross-env INPUT=src/ui/board/index.html vite build --watch",
+    "start": "node dist/server/index.js --stdio",
+    "start:dev": "tsx src/index.ts --stdio",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-app",
+    "linear",
+    "github",
+    "dashboard",
+    "engineering"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "^1.5.0",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "zod": "^4.3.6"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "cross-env": "^10.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "vite": "^6.4.2",
+    "vite-plugin-singlefile": "^2.3.2",
+    "vitest": "^4.1.4"
+  }
+}
