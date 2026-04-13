@@ -6,6 +6,8 @@ Never leave Cursor again. Your engineering task board, inside your editor. Real 
 
 outer-sunset connects to your Linear and GitHub accounts and gives you a live dashboard of everything you're working on — issues, PRs, review status, CI checks. Which means you no longer need to leave your editor. It also gives the AI agent tools to understand your workflow and act on it.
 
+<img src="docs/assets/demo.gif" alt="outer-sunset board running in Cursor" width="100%">
+
 ## What it does
 
 **Visual board** — A live dashboard showing your Linear issues and GitHub PRs grouped by status. Auto-refreshes every 90 seconds. Changed cards get highlighted so you can see what moved.
