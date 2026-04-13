@@ -1,3 +1,5 @@
+<img src="docs/assets/banner.png" alt="outer-sunset — your engineering board, inside your editor" width="100%">
+
 # outer-sunset
 
 Never leave Cursor again. Your engineering task board, inside your editor. Real data from Linear and GitHub, rendered as an interactive MCP App.
@@ -45,7 +47,7 @@ outer-sunset tracks your active task, recent actions, and board state in a persi
 ### Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/outer-sunset.git
+git clone https://github.com/jameslaneovermind/outer-sunset.git
 cd outer-sunset
 pnpm install
 pnpm build
@@ -117,6 +119,7 @@ pnpm run build:server # Build the server
 pnpm run build       # Build both
 pnpm run dev:ui      # Watch mode for UI changes
 pnpm run start:dev   # Run server with tsx (no build needed)
+pnpm test            # Run unit tests
 ```
 
 ## Architecture
@@ -128,6 +131,7 @@ src/
 ├── index.ts              # Entry point
 ├── server.ts             # MCP server — tool registration, data orchestration
 ├── data/
+│   ├── board.ts          # Types and computation (attention, stats, lifecycle)
 │   ├── linear.ts         # Linear GraphQL client
 │   ├── github.ts         # GitHub REST client
 │   ├── linker.ts         # Links Linear issues to GitHub PRs
@@ -141,4 +145,4 @@ src/
 
 ## License
 
-MIT
+Apache-2.0
